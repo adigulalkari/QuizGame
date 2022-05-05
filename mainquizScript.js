@@ -77,22 +77,6 @@ const quizData = [{
         c: "the photosphere",
         d: "the atmosphere",
         correct: "c",
-    },
-    {
-        question: "How many times larger is the radius of the Sun than that of the Earth?",
-        a: "4.8",
-        b: "1,025",
-        c: "109",
-        d: "10",
-        correct: "c",
-    },
-    {
-        question: "Which is the name of a radio source that is very far from Earth?",
-        a: "tracer",
-        b: "taser",
-        c: "phaser",
-        d: "quasar",
-        correct: "d",
     }
 ];
 
@@ -151,7 +135,7 @@ submitBtn.addEventListener('click', () => {
         if (currentQuiz < quizData.length) {
             loadQuiz()
         } else {
-            if (score > 7) {
+            if (score >= 5) {
                 quiz.innerHTML = `
         <h2>Damnn!<br> You know your stuff!!<br>Congrats!!<br>Your score is ${score}/${quizData.length}</h2>
         <button onclick="location.href='landingpage.html';">Go back to HomePage!!!</button>
