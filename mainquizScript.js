@@ -136,9 +136,15 @@ submitBtn.addEventListener('click', () => {
             loadQuiz()
         } else {
             if (score >= 5) {
+                firework1.style.display = 'block';
+                firework2.style.display = 'block';
+                firework3.style.display = 'block';
+                firework4.style.display = 'block';
+                firework5.style.display = 'block';
+                firework6.style.display = 'block';
                 quiz.innerHTML = `
         <h2>Damnn!<br> You know your stuff!!<br>Congrats!!<br>Your score is ${score}/${quizData.length}</h2>
-        <button onclick="location.href='landingpage.html';">Go back to HomePage!!!</button>
+        <button onclick="location.href='index.html';">Go back to HomePage!!!</button>
         `
             } else {
                 quiz.innerHTML = `
