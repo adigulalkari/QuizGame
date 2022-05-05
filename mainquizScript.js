@@ -38,7 +38,62 @@ const quizData = [{
         d: "None of the above",
         correct: "b",
     },
-
+    {
+        question: "The day on which the Sun’s direct rays cross the celestial equator is called?",
+        a: "Equinox",
+        b: "Alphelion",
+        c: "Solistice",
+        d: "Ecliptic",
+        correct: "a",
+    },
+    {
+        question: "Who invented the telescope?",
+        a: "Hypatia",
+        b: "Galileo",
+        c: "Hans Lippershey",
+        d: "Johannes Kepler",
+        correct: "c",
+    },
+    {
+        question: "Which of these objects is the farthest from the Sun?",
+        a: "90377 Sedna",
+        b: "Saturn",
+        c: "Neptune",
+        d: "Kuiper belt",
+        correct: "a",
+    },
+    {
+        question: "What term describes the alignment of three celestial bodies?",
+        a: "suzerainty",
+        b: "symbology",
+        c: "sizzle",
+        d: "syzygy",
+        correct: "d",
+    },
+    {
+        question: "What is the visible part of the Sun called?",
+        a: "the stratosphere",
+        b: "the lithosphere",
+        c: "the photosphere",
+        d: "the atmosphere",
+        correct: "c",
+    },
+    {
+        question: "How many times larger is the radius of the Sun than that of the Earth?",
+        a: "4.8",
+        b: "1,025",
+        c: "109",
+        d: "10",
+        correct: "c",
+    },
+    {
+        question: "Which is the name of a radio source that is very far from Earth?",
+        a: "tracer",
+        b: "taser",
+        c: "phaser",
+        d: "quasar",
+        correct: "d",
+    }
 ];
 
 const quiz = document.getElementById('quiz')
@@ -96,11 +151,18 @@ submitBtn.addEventListener('click', () => {
         if (currentQuiz < quizData.length) {
             loadQuiz()
         } else {
-            quiz.innerHTML = `
-        <h2>You answered ${score}/${quizData.length} questions correctly</h2>
-
-        <button onclick="location.href='scoreboard.html';">Check The Scoreboard!!</button>
+            if (score > 7) {
+                quiz.innerHTML = `
+        <h2>Damnn!<br> You know your stuff!!<br>Congrats!!<br>Your score is ${score}/${quizData.length}</h2>
+        <button onclick="location.href='landingpage.html';">Go back to HomePage!!!</button>
         `
+            } else {
+                quiz.innerHTML = `
+            <h2>You could do better!!<br>Your score is ${score}/${quizData.length}</h2>
+    
+            <button onclick="location.href='landingpage.html';">Go back to HomePage!!</button>
+            `
+            }
         }
     }
 })
