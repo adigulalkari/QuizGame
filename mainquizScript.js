@@ -160,7 +160,7 @@ submitBtn.addEventListener('click', () => {
                 quiz.innerHTML = `
             <h2>You could do better!!<br>Your score is ${score}/${quizData.length}</h2>
     
-            <button onclick="location.href='landingpage.html';">Go back to HomePage!!</button>
+            <button onclick="location.href='index.html';">Go back to HomePage!!</button>
             `
             }
         }
