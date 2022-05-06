@@ -53,6 +53,14 @@ ul li label {
     cursor: pointer;
 }
 
+.hint {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #76ba1b;
+}
+
 button {
     background-color: #ffdb1f;
     color: #fff;

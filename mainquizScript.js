@@ -3,7 +3,7 @@ const quizData = [{
         a: "Discovery",
         b: "Endeavour",
         c: "Challenger",
-        d: "Fortuner",
+        d: "Chevrolet",
         correct: "d",
     },
     {
@@ -19,7 +19,7 @@ const quizData = [{
         a: "Alan Shepard",
         b: "Neil Armstrong",
         c: "Yuri Gagarin",
-        d: "Vladimir Komarov",
+        d: "Rakesh Sharma",
         correct: "c",
     },
     {
@@ -28,6 +28,14 @@ const quizData = [{
         b: "Telescopy",
         c: "Space exploration",
         d: "Meterology",
+        correct: "a",
+    },
+    {
+        question: "Which of these objects is the farthest from the Sun?",
+        a: "Andromeda Galaxy",
+        b: "Saturn",
+        c: "Neptune",
+        d: "Mercury",
         correct: "a",
     },
     {
@@ -55,27 +63,19 @@ const quizData = [{
         correct: "c",
     },
     {
-        question: "Which of these objects is the farthest from the Sun?",
-        a: "90377 Sedna",
-        b: "Saturn",
-        c: "Neptune",
-        d: "Kuiper belt",
-        correct: "a",
-    },
-    {
-        question: "What term describes the alignment of three celestial bodies?",
-        a: "suzerainty",
-        b: "symbology",
-        c: "sizzle",
-        d: "syzygy",
+        question: "Which is the biggest planet?",
+        a: "Earth",
+        b: "Mercury",
+        c: "Saturn",
+        d: "Jupiter",
         correct: "d",
     },
     {
-        question: "What is the visible part of the Sun called?",
-        a: "the stratosphere",
-        b: "the lithosphere",
-        c: "the photosphere",
-        d: "the atmosphere",
+        question: "SpaceX is owned by whom?",
+        a: "Jack Ma",
+        b: "Mark Zuckerberg",
+        c: "Elon Musk",
+        d: "Ambani",
         correct: "c",
     }
 ];
@@ -88,6 +88,7 @@ const b_text = document.getElementById('b_text')
 const c_text = document.getElementById('c_text')
 const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
+const hint = document.getElementById('hint')
 
 
 let currentQuiz = 0
@@ -133,6 +134,11 @@ submitBtn.addEventListener('click', () => {
         currentQuiz++
 
         if (currentQuiz < quizData.length) {
+            if (currentQuiz == 2) {
+                hint.style.display = 'block'
+            } else {
+                hint.style.display = 'none'
+            }
             loadQuiz()
         } else {
             if (score >= 5) {
