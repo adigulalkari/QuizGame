@@ -1,7 +1,7 @@
 # QuizGame
 
 <h2>This is a simple space themed Quiz Application. </h2>
-<h3>The application uses tools lie HTML CSS Javascript Bootstrap</h3>
+<h3>The application uses tools like HTML CSS Javascript Bootstrap</h3>
 <h3>Access this application on https://adigulalkari.github.io/QuizGame/</h3>
 <h2> Collabrators:</h2>
 <h3>Adi Gulalkari <br> https://github.com/adigulalkari</h3>
